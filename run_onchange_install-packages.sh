@@ -1,5 +1,5 @@
 #!/bin/bash
-packages="build-essential curl neofetch tmux traceroute wget whois zsh at git"
+packages="build-essential curl neofetch tmux traceroute wget whois zsh at git smbclient"
 
 if command -v apt
 then
@@ -24,4 +24,5 @@ then
   fi
 fi
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+source ~/.bashrc
 brew install gcc
