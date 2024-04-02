@@ -1,0 +1,13 @@
+[shlvl]
+disabled = false
+threshold = 1
+symbol = "↕️ "
+
+[shell]
+disabled = false
+bash_indicator = ""
+
+[os]
+disabled = false
+format = "$symbol "
+symbols.Ubuntu = ""
