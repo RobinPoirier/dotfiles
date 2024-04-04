@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Packages to install
-packages="software-properties-common apt-transpor-https build-essential curl neofetch tmux traceroute wget gpg whois zsh at git smbclient"
+packages="software-properties-common apt-transport-https build-essential curl neofetch tmux traceroute wget gpg whois zsh at git smbclient"
 
 if command -v apt
 then
