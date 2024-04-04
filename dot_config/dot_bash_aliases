@@ -23,7 +23,7 @@ alias ports='netstat -tulanp'
 alias h='history'
 alias j='jobs -l'
 alias mv='mv -iv'
-alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'
+alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -'
 alias ssha='eval $(ssh-agent) && ssh-add'
 alias weather='curl wttr.in'
 alias wget='wget -c'
@@ -55,7 +55,8 @@ alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
 # reload bash config
-alias reload="source ~/.bashrc"
+alias reload='source ~/.bashrc'
+alias rl='source ~/.bashrc'
 
 # Manage packages easier
 if [ -f /usr/bin/nala ]; then
