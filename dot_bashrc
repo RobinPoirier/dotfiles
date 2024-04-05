@@ -132,6 +132,6 @@ if [ -t 0 ]; then
     fi
 fi
 
-eval "$(starship init bash)"
-
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+eval "$(starship init bash)"
