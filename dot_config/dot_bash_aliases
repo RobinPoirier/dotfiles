@@ -75,6 +75,12 @@ if [ -f /usr/bin/pacman ]; then
   alias install='sudo pacman -S'
 fi
 
+if [ -f /usr/bin/dnf ]; then
+  alias update='sudo dnf -y'
+  alias upgrade='sudo dnf -y'
+  alias install='sudo dnf'
+fi
+
 if command -v exa ; then
   alias ls='exa --icons -F -H --group-directories-first -1'
   alias ll='ls -alF'

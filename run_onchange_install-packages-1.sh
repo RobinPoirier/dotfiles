@@ -14,7 +14,6 @@ then
     sudo nala update && sudo nala upgrade -y
     for app in $packages
     do  
-      echo $app
       sudo nala install $app -y
     done
   else
@@ -24,6 +23,13 @@ then
       sudo apt install $app -y
     done
   fi
+elif command -v dnf
+then
+  sudo dnf update -y
+  for app in $packages
+  do
+    sudo dnf install $app -y
+  done
 fi
 
 # Microsoft GPG Key
@@ -37,8 +43,10 @@ sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packag
 if command -v nala
 then
   sudo nala update && sudo nala install code -y
-else
+elif command -v apt
   sudo apt update && sudo apt install code -y
+elif command -v dnf
+  sudo dnf update -y && sudo dnf install code -y
 fi
 
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
