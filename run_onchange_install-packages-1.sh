@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Packages to install
-packages="software-properties-common apt-transport-https build-essential curl neofetch tmux traceroute wget gpg whois zsh at git smbclient"
+packages="software-properties-common apt-transport-https build-essential curl neofetch tmux traceroute wget gpg whois zsh at git" # smbclient"
 
 if command -v apt
 then
@@ -45,7 +45,9 @@ then
   sudo nala update && sudo nala install code -y
 elif command -v apt
   sudo apt update && sudo apt install code -y
-elif command -v dnf
+fi
+
+if command -v dnf
   sudo dnf update -y && sudo dnf install code -y
 fi
 
