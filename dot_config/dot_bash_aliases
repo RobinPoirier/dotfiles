@@ -61,11 +61,11 @@ alias rl='source ~/.bashrc'
 # Manage packages easier
 if [ -f /usr/bin/nala ]; then
   alias update='sudo nala update'
-  alias upgrade='sudo nala update && sudo nala upgrade && sudo nala autoremove && sudo nala clean'
+  alias upgrade='sudo nala update && sudo nala upgrade -y && sudo nala autoremove && sudo nala clean'
   alias install='sudo nala install'
 elif [ -f /usr/bin/apt ]; then
   alias update='sudo apt update'
-  alias upgrade='sudo apt update && sudo apt dist-upgrade && sudo apt autoremove && sudo apt clean'
+  alias upgrade='sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove && sudo apt clean'
   alias install='sudo apt install'
 fi
 
